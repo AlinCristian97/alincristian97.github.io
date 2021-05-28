@@ -57,6 +57,13 @@ img {
 strong {
   font-weight: var(--fw-bold);
 }
+
+:focus {
+  /* tab-focused elements */
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
 /* END: General Styles */
 
 /* Typography */
@@ -105,13 +112,35 @@ h3 {
 }
 /* END: Typography */
 
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* END: Buttons */
+
 /* Header */
 .nav {
   display: none;
 }
 /* END: Header */
 
-/* Section: Intro */
+/* Section - Intro */
 .intro {
   position: relative;
 }
@@ -151,4 +180,111 @@ h3 {
 }
 /* END: Section: Intro */
 
-/* TODO: Auto-width from both sizes FIX => Used "display: block" in .section__title--intro strong */
+/* Section: About Me */
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__img {
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      "title img"
+      "subtitle img"
+      "text img";
+    grid-column-gap: 2em;
+  }
+
+  .section__title--about {
+    grid-area: title;
+  }
+
+  .section__subtitle--about {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    padding-right: calc(200px + 4em);
+  }
+
+  .about-me__img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
+}
+/* END: Section: About Me */
+
+/* Section: My Projects */
+.my-projects {
+  background-color: var(--clr-dark);
+  background-size: cover; /* never repeats image */
+  background-blend-mode: multiply; /* blends BG with image */
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.section__title--projects {
+  color: var(--clr-accent);
+  position: relative; /* "because I have this pseudo element that I wanna put on it */
+}
+
+.section__title--projects::after {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  /* background: currentColor; this will make the color match with the parent obj color */
+  opacity: 0.25;
+}
+
+.projects {
+  margin-bottom: 4em; /* not working */
+}
+
+.project {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .projects {
+    display: flex; /* makes three columns right away */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project + .project {
+    /* WTF is this '+'???? Short Answer: Applies modifiers only between same kind - Long Answer: It's checking it's surroundings and IF it is 'touching' a 'sibling' then it's going to apply the modifiers*/
+    margin-left: 2em;
+  }
+}
+/* End: Section - My Projects */
+
+/* My Certifications */
+.my-certifications {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.section__subtitle--certifications {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
+}
+
+/* END: My Certifications */
+
+/* TODO: Auto-width from both sizes FIX => Used "display: block" in .section__title--intro strong */ ;
