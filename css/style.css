@@ -44,6 +44,7 @@ html {
 }
 
 body {
+  height: 100%;
   margin: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
@@ -52,7 +53,7 @@ body {
 
 section {
   padding: 5em 2em;
-  height: 100vh;
+  overflow: hidden;
 }
 
 ul {
@@ -77,6 +78,12 @@ strong {
   /* tab-focused elements */
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
+}
+
+@media (min-height: 800px) {
+  section {
+    /*height: 100vh;*/
+  }
 }
 
 /* END: General Styles */
@@ -150,6 +157,57 @@ h3 {
 
 /* END: Buttons */
 
+/* Cards */
+
+.card {
+  margin: 0 auto 4em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: .3em;
+  padding: 2%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card--intro__few-words {
+  max-width: 1000px;
+  margin-top: 4em;
+  background-color: darkslategrey;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.card--project{
+  max-width: 500px;
+  background-color: darkgray;
+}
+
+.card--portfolio__item{
+  margin-bottom: 0;
+  max-width: 500px;
+  background-color: darkgray;
+}
+
+.card--portfolio__item:focus{
+  /*background-color: var(--clr-accent);*/
+  /*position: relative;*/
+  /*z-index: 2;*/
+}
+
+.card--portfolio__item:hover {
+  /*background-color: var(--clr-accent);*/
+}
+
+@media (min-width: 800px) {
+  .card + .card {
+    /*margin-left: 2em;*/
+  }
+}
+
+/* END: Cards */
+
 /* Header */
 header {
   background-color: var(--clr-darker);
@@ -177,25 +235,44 @@ header {
 /* END: Header */
 
 /* Section - Intro */
+.intro--section {
+  /*height: calc(100vh - 69px);*/
+}
+
 .intro {
   background-color: var(--clr-dark);
   color: var(--clr-light);
 }
 
-.intro__img {
+.intro__img-cropper-round{
+  margin: 0 auto;
   width: 250px;
-  display: block;
-  margin: auto;
-  clip-path: circle();
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 10px solid var(--clr-darker);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.intro__img-cropper-round:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .section__title--intro {
+  padding: 1% 0;
   text-align: center;
   font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
 }
 
 .section__subtitle--intro {
   text-align: center;
+}
+
+.intro__few-words {
+  text-align: center;
+  border-radius: .3em;
 }
 
 @media (min-width: 600px) {
@@ -281,26 +358,13 @@ header {
   opacity: 0.25;
 }
 
-.projects {
-  margin-bottom: 4em; /* not working */
-}
-
-.project {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
 @media (min-width: 800px) {
   .projects {
     display: flex; /* makes three columns right away */
+    gap: 2em;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .project + .project {
-    /* WTF is this '+'???? Short Answer: Applies modifiers only between same kind - Long Answer: It's checking it's surroundings and IF it is 'touching' a 'sibling' then it's going to apply the modifiers*/
-    margin-left: 2em;
   }
 }
 /* End: Section - My Projects */
@@ -313,29 +377,41 @@ header {
 }
 
 .portfolio {
+  /*column-count: 3;*/
+  /*column-width: 250px;*/
+  /*column-rule: 1px dotted #fff;*/
+  /*column-gap: 2em;*/
+  
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.portfolio__item {
-  background-color: var(--clr-accent);
-  overflow: hidden;
+  grid-gap: 2em;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(250px, auto);
+  
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portfolio__img {
-  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  border-radius: 0.3em;
 }
 
-.portfolio__item:focus {
-  position: relative;
-  z-index: 2;
+@media (min-width:600px){
+  .portfolio {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-  transform: scale(1.2);
-  opacity: 0.5;
+@media (min-width:1000px){
+  .portfolio {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
+
+
 /* END: My Certifications */
 
 /* Footer */

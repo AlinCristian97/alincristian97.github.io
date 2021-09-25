@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AlinCristian97 - Portfolio Website</title>   
+        <title>Alin Cristian - Portfolio</title>   
         <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -20,6 +20,9 @@
 
         <!-- css -->
         <link rel="stylesheet" href="css/style.css" />
+        
+        <!-- js -->
+        <script src="js/index.js"></script>
     </head>
     <body>
         <!-- Header -->
@@ -33,32 +36,39 @@
                 </ul>
             </nav>
         </header>
-
+        
         <!-- Intro -->
-        <section class="intro" id="home">
-            <img src="img/melowsize.jpg" alt="a picture of Alin Apostol smiling" class="intro__img">
+        <section class="intro intro--section" id="home">
+            <div class="intro__img-cropper-round">
+                <img src="img/melowsize.jpg" alt="a picture of Alin Apostol smiling" class="intro__img">
+            </div>
             <h1 class="section__title section__title--intro">
                 Alin Apostol
             </h1>
+            <div class="card card--intro__few-words">
+                <p class="intro__few-words">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
         </section>
 
         <!-- My Projects -->
         <section class="my-projects" id="projects">
             <h2 class="section__title section__title--projects">My Projects</h2>
             <div class="projects">
-                <div class="project">
+                <div class="card card--project">
                     <h3>Game 1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt 
                         sit amet leoac dictum. Mauris suscipit tempus felis a dapibus. 
                         Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
                 </div> <!-- / project -->
-                <div class="project">
+                <div class="card card--project">
                     <h3>Game 2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt 
                         sit amet leoac dictum. Mauris suscipit tempus felis a dapibus. 
                         Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
                 </div> <!-- / project -->
-                <div class="project">
+                <div class="card card--project">
                     <h3>Game 3</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt 
                         sit amet leoac dictum. Mauris suscipit tempus felis a dapibus. 
@@ -87,34 +97,74 @@
             <p class="section__subtitle section__subtitle--certifications">Here are my certifications</p>
             <div class="portfolio">
                 <!-- Portfolio item 01 -->
-                <a href="#" class="portfolio__item">
+                <div class="card card--portfolio__item">
                     <img src="img/levitating-tree.jpg" alt="" class="portfolio__img">
-                </a>
+                    <br>
+                    <h3>Game 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                </div>
                 
                 <!-- Portfolio item 02 -->
-                <a href="#" class="portfolio__item">
+                <div class="card card--portfolio__item">
                     <img src="img/mountains.jpg" alt="" class="portfolio__img">
-                </a>
+                    <br>
+                    <h3>Game 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                </div>
 
                 <!-- Portfolio item 03 -->
-                <a href="#" class="portfolio__item">
+                <div class="card card--portfolio__item">
                     <img src="img/cosmodisc.jpg" alt="" class="portfolio__img">
-                </a>
+                    <br>
+                    <h3>Game 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies</p>
+                </div>
 
                 <!-- Portfolio item 04 -->
-                <a href="#" class="portfolio__item">
+                <div class="card card--portfolio__item">
                     <img src="img/abyssalsight.jpg" alt="" class="portfolio__img">
-                </a>
+                    <h3>Game 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                </div>
 
                 <!-- Portfolio item 05 -->
-                <a href="#" class="portfolio__item">
+                <div class="card card--portfolio__item">
                     <img src="img/steel.jpg" alt="" class="portfolio__img">
-                </a>
+                    <h3>Game 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                    
+                </div>
 
                 <!-- Portfolio item 06 -->
-                <a href="#" class="portfolio__item">
+                <div class="card card--portfolio__item">
                     <img src="img/tank.jpg" alt="" class="portfolio__img">
-                </a>
+                    <h3>Game 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                </div>
             </div>
         </section>
 
@@ -144,9 +194,5 @@
                 </li>
             </ul>
         </footer>
-
-        
-        <script src="js/index.js"></script>
-    
     </body>
 </html> 
