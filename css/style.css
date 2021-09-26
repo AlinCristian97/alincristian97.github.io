@@ -13,7 +13,7 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #fff;
+  --clr-light: #f3f3f3;
   --clr-dark: #373844;
   --clr-darker: #22232c;
   --clr-grayed-out: gray;
@@ -124,6 +124,10 @@ h3 {
   background: var(--clr-light);
   /* background: currentColor; this will make the color match with the parent obj color */
   opacity: 0.25;
+}
+
+.section__title--projects::after {
+  margin: 0.5em auto 1em;
 }
 
 .section__subtitle {
@@ -404,7 +408,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 4%;
-  margin: 0 auto 5em;
+  margin: 0 auto 4em;
   border-radius: 1000px;
   max-width: 1000px;
 }
@@ -415,24 +419,21 @@ header {
 }
 
 #toggle-label-2d {
-  background-color: var(--clr-dark);
   background-color: var(--clr-2d);
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   border-radius: 50%;
-  color: var(--clr-light);
   color: var(--clr-dark);
   box-shadow: 0 0 5px rgba(0, 0, 0, .4);
 }
 
 #toggle-label-3d{
-  color: var(--clr-light);
   color: var(--clr-grayed-out);
   background-color: var(--clr-dark);
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, .4);
 }
@@ -560,6 +561,19 @@ input:checked[type="checkbox"]:before{
     width: 160px;
     height: 50px;
     margin-bottom: 4em;
+  }
+
+
+  #toggle-label-2d {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  #toggle-label-3d{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
   }
 }
 
