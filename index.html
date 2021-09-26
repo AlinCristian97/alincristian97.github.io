@@ -40,45 +40,103 @@
         <!-- Intro -->
         <section class="intro intro--section" id="home">
             <div class="intro__img-cropper-round">
-                <img src="img/melowsize.jpg" alt="a picture of Alin Apostol smiling" class="intro__img">
+                <img src="img/autumn-24.jpg" alt="a picture of Alin Apostol smiling" class="intro__img">
             </div>
-            <h1 class="section__title section__title--intro">
+            <h1 class="intro__name">
                 Alin Apostol
             </h1>
             <div class="card card--intro__few-words">
                 <p class="intro__few-words">
                     Lorem ipsum dolor sit amet consectetur adipiscing suscipit finibus rhoncus tempus consequat felis.
                 </p>
+                <p>
+                    test
+                </p>
+                <div class="unity-certification-badges">
+                    <div data-iframe-width="250" data-iframe-height="270" data-share-badge-id="df9e2608-36ac-48b9-898b-5248b10a5a04" data-share-badge-host="https://www.credly.com"></div>
+                    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+                    <div data-iframe-width="250" data-iframe-height="270" data-share-badge-id="452d492f-1a08-45f7-8833-6b07473c24ce" data-share-badge-host="https://www.credly.com"></div>
+                    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                </div>
             </div>
         </section>
 
         <!-- My Projects -->
         <section class="my-projects" id="projects">
+            <button onclick="myFunction()">Click Me</button>
+
+            <div id="myDIV">
+                This is my DIV element.
+            </div>
             <h2 class="section__title section__title--projects">My Projects</h2>
             <div class="projects">
+
+                <!-- Project 01 -->
                 <div class="card card--project">
-                    <h3>Game 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt 
-                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus. 
-                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
-                </div> <!-- / project -->
+                    <div class="project">
+                        <div class="project__header">
+                            <img src="img/logos/projects/garden-defenders-background-black.jpg" alt="" class="project__header__img">
+                            <h3 class="certificate__header__title">Unity Certified Associate: Programmer</h3>
+                        </div>
+                        <div class="project__body">
+                            <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                                sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                                Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                        </div>
+                        <div class="project__footer">
+                            <a href="https://www.credly.com/badges/df9e2608-36ac-48b9-898b-5248b10a5a04/public_url" target="_blank" tabindex=0 class="btn btn--card">
+                                Play Game
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
                 <div class="card card--project">
-                    <h3>Game 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt 
-                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus. 
-                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
-                </div> <!-- / project -->
+                    <div class="project">
+                        <div class="project__header">
+                            <img src="img/logos/certifications/unity-icon-white-on-black.jpg" alt="" class="project__header__img">
+                            <h3 class="certificate__header__title">Unity Certified Associate: Programmer</h3>
+                        </div>
+                        <div class="project__body">
+                            <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                                sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                                Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                        </div>
+                        <div class="project__footer">
+                            <a href="https://www.credly.com/badges/df9e2608-36ac-48b9-898b-5248b10a5a04/public_url" target="_blank" tabindex=0 class="btn btn--card">
+                                View certificate
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project item 03 -->
                 <div class="card card--project">
-                    <h3>Game 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt 
-                        sit amet leoac dictum. Mauris suscipit tempus felis a dapibus. 
-                        Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
-                </div> <!-- / project -->
+                    <div class="project">
+                        <div class="project__header">
+                            <img src="img/logos/certifications/unity-icon-white-on-black.jpg" alt="" class="project__header__img">
+                            <h3 class="certificate__header__title">Unity Certified Associate: Programmer</h3>
+                        </div>
+                        <div class="project__body">
+                            <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                                sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                                Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                        </div>
+                        <div class="project__footer">
+                            <a href="https://www.credly.com/badges/df9e2608-36ac-48b9-898b-5248b10a5a04/public_url" target="_blank" tabindex=0 class="btn btn--card">
+                                View certificate
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                
             </div> <!-- / projects -->
-
-            <a href="#" class="btn">Button</a>
-        </section>
-
+            
         <!-- About me -->
         <section class="about-me" id="about">
             <h2 class="section__title section__title--about">Who I am</h2>
@@ -88,47 +146,48 @@
                     leoac dictum. Mauris suscipit tempus felis a dapibus. Phasellus maximus hendrerit 
                     sollicitudin. Aenean finibus rhoncus ultricies.</p>
             </div>
-            <img src="img/melowsize.jpg" class="about-me__img">
+            <img src="img/melowsize.jpg" alt="" class="about-me__img">
         </section>
 
         <!-- My Certifications -->
         <section class="my-certifications" id="certifications">
             <h2 class="section__title section__title--certifications">My Certifications</h2>
-            <p class="section__subtitle section__subtitle--certifications">Here are my certifications</p>
-            <div class="portfolio">
-                <!-- Portfolio item 01 -->
-                <div class="card card--portfolio__item">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__header">
-                            <img src="img/logos/unity-icon-white-on-black.jpg" alt="" class="portfolio__item__header__img">
-                            <h3 class="portfolio__item__header__title">Unity Certified Associate: Programmer</h3>  
+            <div class="certifications">
+                
+                <!-- Certificate 01 -->
+                <div class="card card--certificate">
+                    <div class="certificate">
+                        <div class="certificate__header">
+                            <img src="img/logos/certifications/unity-icon-white-on-black.jpg" alt="" class="certificate__header__img">
+                            <h3 class="certificate__header__title">Unity Certified Associate: Programmer</h3>  
                         </div>
-                        <div class="portfolio__item__body">
-                            <p class="portfolio__item__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        <div class="certificate__body">
+                            <p class="certificate__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
                                 sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
                                 Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
                         </div>
-                        <div class="portfolio__item__footer">
-                            <a tabindex=0 class="btn btn--card">
+                        <div class="certificate__footer">
+                            <a href="https://www.credly.com/badges/df9e2608-36ac-48b9-898b-5248b10a5a04/public_url" target="_blank" tabindex=0 class="btn btn--card">
                                 View certificate
                             </a>
+
                         </div>
                     </div>
                 </div>
                 
-                <!-- Portfolio item 02 -->
-                <div class="card card--portfolio__item">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__header">
-                            <img src="img/logos/unity-icon-white-on-black.jpg" alt="" class="portfolio__item__header__img">
-                            <h3 class="portfolio__item__header__title">Unity Certified Associate: Programmer</h3>
+                <!-- Certificate 02 -->
+                <div class="card card--certificate">
+                    <div class="certificate">
+                        <div class="certificate__header">
+                            <img src="img/logos/certifications/unity-icon-text-white-on-black.jpg" alt="" class="certificate__header__img">
+                            <h3 class="certificate__header__title">Unity Certified Associate: Programmer</h3>
                         </div>
-                        <div class="portfolio__item__body">
-                            <p class="portfolio__item__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        <div class="certificate__body">
+                            <p class="certificate__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
                                 sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
                                 Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
                         </div>
-                        <div class="portfolio__item__footer">
+                        <div class="certificate__footer">
                             <a tabindex=0 class="btn btn--card">
                                 View certificate
                             </a>
@@ -136,19 +195,19 @@
                     </div>
                 </div>
 
-                <!-- Portfolio item 03 -->
-                <div class="card card--portfolio__item">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__header">
-                            <img src="img/logos/unity-icon-white-on-black.jpg" alt="" class="portfolio__item__header__img">
-                            <h3 class="portfolio__item__header__title">Unity Certified Associate: Programmer</h3>
+                <!-- Certificate 03 -->
+                <div class="card card--certificate">
+                    <div class="certificate">
+                        <div class="certificate__header">
+                            <img src="img/logos/certifications/udemy-icon-white-on-black.jpg" alt="" class="certificate__header__img">
+                            <h3 class="certificate__header__title">Complete C# Unity Game Developer 2D</h3>
                         </div>
                         <div class="portfolio__item__body">
                             <p class="portfolio__item__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
                                 sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
                                 Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
                         </div>
-                        <div class="portfolio__item__footer">
+                        <div class="certificate__footer">
                             <a tabindex=0 class="btn btn--card">
                                 View certificate
                             </a>
@@ -156,19 +215,19 @@
                     </div>
                 </div>
 
-                <!-- Portfolio item 04 -->
-                <div class="card card--portfolio__item">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__header">
-                            <img src="img/logos/unity-icon-white-on-black.jpg" alt="" class="portfolio__item__header__img">
-                            <h3 class="portfolio__item__header__title">Unity Certified Associate: Programmer</h3>
+                <!-- Certificate 04 -->
+                <div class="card card--certificate">
+                    <div class="certificate">
+                        <div class="certificate__header">
+                            <img src="img/logos/certifications/unity-icon-text-white-on-black.jpg" alt="" class="certificate__header__img">
+                            <h3 class="certificate__header__title">Unity Certified Associate: Programmer</h3>
                         </div>
-                        <div class="portfolio__item__body">
-                            <p class="portfolio__item__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        <div class="certificate__body">
+                            <p class="certificate__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
                                 sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
                                 Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
                         </div>
-                        <div class="portfolio__item__footer">
+                        <div class="certificate__footer">
                             <a tabindex=0 class="btn btn--card">
                                 View certificate
                             </a>
@@ -176,19 +235,19 @@
                     </div>
                 </div>
 
-                <!-- Portfolio item 05 -->
-                <div class="card card--portfolio__item">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__header">
-                            <img src="img/logos/unity-icon-white-on-black.jpg" alt="" class="portfolio__item__header__img">
-                            <h3 class="portfolio__item__header__title">Unity Certified Associate: Programmer</h3>
+                <!-- Certificate 05 -->
+                <div class="card card--certificate">
+                    <div class="certificate">
+                        <div class="certificate__header">
+                            <img src="img/logos/certifications/unity-icon-text-white-on-black.jpg" alt="" class="certificate__header__img">
+                            <h3 class="certificate__header__title">Unity Certified Associate: Programmer</h3>
                         </div>
-                        <div class="portfolio__item__body">
-                            <p class="portfolio__item__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        <div class="certificate__body">
+                            <p class="certificate__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
                                 sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
                                 Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
                         </div>
-                        <div class="portfolio__item__footer">
+                        <div class="certificate__footer">
                             <a tabindex=0 class="btn btn--card">
                                 View certificate
                             </a>
@@ -196,19 +255,19 @@
                     </div>
                 </div>
 
-                <!-- Portfolio item 06 -->
-                <div class="card card--portfolio__item">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__header">
-                            <img src="img/logos/unity-icon-white-on-black.jpg" alt="" class="portfolio__item__header__img">
-                            <h3 class="portfolio__item__header__title">Unity Certified Associate: Programmer</h3>
+                <!-- Certificate 06 -->
+                <div class="card card--certificate">
+                    <div class="certificate">
+                        <div class="certificate__header">
+                            <img src="img/logos/certifications/unity-icon-text-white-on-black.jpg" alt="" class="certificate__header__img">
+                            <h3 class="certificate__header__title">Unity Certified Associate: Programmer</h3>
                         </div>
-                        <div class="portfolio__item__body">
-                            <p class="portfolio__item__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                        <div class="certificate__body">
+                            <p class="certificate__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
                                 sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
                                 Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
                         </div>
-                        <div class="portfolio__item__footer">
+                        <div class="certificate__footer">
                             <a tabindex=0 class="btn btn--card">
                                 View certificate
                             </a>

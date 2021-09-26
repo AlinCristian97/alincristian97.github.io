@@ -72,7 +72,7 @@ strong {
   font-weight: var(--fw-bold);
 }
 
-:focus {
+:focus{
   /* tab-focused elements */
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
@@ -104,8 +104,20 @@ h3 {
   margin-bottom: 0.25em;
 }
 
-.section__title--intro {
-  font-weight: var(--fw-reg);
+.section__title {
+  color: var(--clr-accent);
+  position: relative; /* "because I have this pseudo element that I wanna put on it */
+}
+
+.section__title::after {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 1px;
+  margin: 0.5em auto 1.5em;
+  background: var(--clr-light);
+  /* background: currentColor; this will make the color match with the parent obj color */
+  opacity: 0.25;
 }
 
 .section__subtitle {
@@ -125,6 +137,7 @@ h3 {
   font-weight: var(--fw-bold);
   margin-bottom: 2em;
 }
+
 /* END: Typography */
 
 /* Buttons */
@@ -138,7 +151,7 @@ h3 {
   cursor: pointer;
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
   font-weight: var(--fw-bold);
   /*transition: transform 200ms ease-in-out;*/
 }
@@ -185,11 +198,6 @@ h3 {
 }
 
 .card--project{
-  max-width: 500px;
-  background-color: darkgray;
-}
-
-.card--portfolio__item{
   display: flex;
   margin-bottom: 0;
   max-width: 500px;
@@ -199,20 +207,24 @@ h3 {
   color: var(--clr-dark)
 }
 
-.card--portfolio__item:focus{
+.card--certificate{
+  display: flex;
+  margin-bottom: 0;
+  max-width: 500px;
+  background-color: white;
+  padding: 6%;
+  text-align: start;
+  color: var(--clr-dark)
+}
+
+.card--certificate:focus{
   /*background-color: var(--clr-accent);*/
   /*position: relative;*/
   /*z-index: 2;*/
 }
 
-.card--portfolio__item:hover {
+.card--certificate:hover {
   /*background-color: var(--clr-accent);*/
-}
-
-@media (min-width: 800px) {
-  .card + .card {
-    /*margin-left: 2em;*/
-  }
 }
 
 /* END: Cards */
@@ -268,16 +280,12 @@ header {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.section__title--intro {
+.intro__name {
   padding: 1% 0;
   text-align: center;
   font-size: var(--fs-h3);
   font-weight: var(--fw-bold);
   color: var(--clr-accent);
-}
-
-.section__subtitle--intro {
-  text-align: center;
 }
 
 .intro__few-words {
@@ -291,10 +299,6 @@ header {
   }
 
   .intro__img {
-
-  }
-
-  .section__subtitle--intro {
 
   }
 }
@@ -342,52 +346,11 @@ header {
 /* Section: My Projects */
 .my-projects {
   background-color: var(--clr-darker);
-  background-size: cover; /* never repeats image */
-  background-blend-mode: multiply; /* blends BG with image */
   color: var(--clr-light);
   text-align: center;
 }
 
-.section__title--projects {
-  color: var(--clr-accent);
-  position: relative; /* "because I have this pseudo element that I wanna put on it */
-}
-
-.section__title--projects::after {
-  content: "";
-  display: block;
-  width: 2em;
-  height: 1px;
-  margin: 0.5em auto 1em;
-  background: var(--clr-light);
-  /* background: currentColor; this will make the color match with the parent obj color */
-  opacity: 0.25;
-}
-
-@media (min-width: 800px) {
-  .projects {
-    display: flex; /* makes three columns right away */
-    gap: 2em;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-/* End: Section - My Projects */
-
-/* My Certifications */
-.my-certifications {
-  background-color: var(--clr-dark);
-  color: var(--clr-light);
-  text-align: center;
-}
-
-.portfolio {
-  /*column-count: 3;*/
-  /*column-width: 250px;*/
-  /*column-rule: 1px dotted #fff;*/
-  /*column-gap: 2em;*/
-  
+.projects{
   display: grid;
   grid-gap: 3em;
   grid-template-columns: 1fr;
@@ -398,7 +361,7 @@ header {
   margin-right: auto;
 }
 
-.portfolio__item {
+.project{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -407,45 +370,114 @@ header {
   justify-content: space-between;
 }
 
-.portfolio__item__header{
+.project__header{
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 5%;
 }
 
-.portfolio__item__header__img {
+.project__header__img {
   max-width: 90px;
   height: auto;
   width: 100%;
   border-radius: 0.3em;
 }
 
-.portfolio__item__header__title {
-}
-
-.portfolio__item__footer {
+.project__footer {
   width: 100%;
 }
 
 @media (min-width:600px){
-  .portfolio {
+  .projects {
     grid-template-columns: 1fr 1fr;
     grid-gap: 2em;
   }
-  
-  .portfolio__item {
+
+  .project {
     gap: 30px
   }
 }
 
 @media (min-width:1000px){
-  .portfolio {
+  .projects {
     grid-template-columns: 1fr 1fr;
     grid-gap: 2em;
   }
 
-  .portfolio__item {
+  .project{
+    gap: 40px;
+  }
+}
+
+/* End: Section - My Projects */
+
+/* My Certifications */
+.my-certifications {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.certifications {
+  display: grid;
+  grid-gap: 3em;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(250px, auto);
+
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.certificate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.certificate__header{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5%;
+}
+
+.certificate__header__img {
+  max-width: 90px;
+  height: auto;
+  width: 100%;
+  border-radius: 0.3em;
+}
+
+.certificate__header__title {
+}
+
+.certificate__footer {
+  width: 100%;
+}
+
+@media (min-width:600px){
+  .certifications {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+  }
+  
+  .certificate {
+    gap: 30px
+  }
+}
+
+@media (min-width:1000px){
+  .certifications {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+  }
+
+  .certificate {
     gap: 40px;
   }
 }
