@@ -64,79 +64,152 @@
 
         <!-- My Projects -->
         <section class="my-projects" id="projects">
-            <button onclick="myFunction()">Click Me</button>
 
-            <div id="myDIV">
-                This is my DIV element.
-            </div>
-            <h2 class="section__title section__title--projects">My Projects</h2>
-            <div class="projects">
-
-                <!-- Project 01 -->
-                <div class="card card--project">
-                    <div class="project">
-                        <div class="project__header">
-                            <img src="img/logos/projects/garden-defenders-headonly-background-black.jpg" alt="" class="project__header__img">
-                            <h3 class="project__header__title">Garden Defenders</h3>
-                        </div>
-                        <div class="project__body">
-                            <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
-                                sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
-                                Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
-                        </div>
-                        <div class="project__footer">
-                            <a href="https://www.credly.com/badges/df9e2608-36ac-48b9-898b-5248b10a5a04/public_url" target="_blank" tabindex=0 class="btn btn--card">
-                                Play Game
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 02 -->
-                <div class="card card--project">
-                    <div class="project">
-                        <div class="project__header">
-                            <img src="img/logos/certifications/unity-icon-white-on-black.jpg" alt="" class="project__header__img">
-                            <h3 class="project__header__title">Unity Certified Associate: Programmer</h3>
-                        </div>
-                        <div class="project__body">
-                            <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
-                                sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
-                                Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
-                        </div>
-                        <div class="project__footer">
-                            <a href="https://www.credly.com/badges/df9e2608-36ac-48b9-898b-5248b10a5a04/public_url" target="_blank" tabindex=0 class="btn btn--card">
-                                View certificate
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project item 03 -->
-                <div class="card card--project">
-                    <div class="project">
-                        <div class="project__header">
-                            <img src="img/logos/certifications/unity-icon-white-on-black.jpg" alt="" class="project__header__img">
-                            <h3 class="project__header__title">Unity Certified Associate: Programmer</h3>
-                        </div>
-                        <div class="project__body">
-                            <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
-                                sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
-                                Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
-                        </div>
-                        <div class="project__footer">
-                            <a href="https://www.credly.com/badges/df9e2608-36ac-48b9-898b-5248b10a5a04/public_url" target="_blank" tabindex=0 class="btn btn--card">
-                                View certificate
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-                
-            </div> <!-- / projects -->
+<!--            <p>-->
+<!--                test-->
+<!--            </p>-->
+<!--            -->
+<!--            <div>-->
+<!--                <iframe id='webgl_iframe' frameborder="0" allow="autoplay; fullscreen; vr" allowfullscreen="" allowvr=""-->
+<!--                        mozallowfullscreen="true" src="https://play.unity3dusercontent.com/webgl/93b6268e-0ab1-4b71-8272-90102c445f05?screenshot=false&embedType=embed"  width="810"-->
+<!--                        height="640" onmousewheel="" webkitallowfullscreen="true"></iframe>-->
+<!--            </div>-->
+<!--            -->
+<!--            <p>-->
+<!--                test-->
+<!--            </p>-->
             
+            <h2 class="section__title section__title--projects">My Projects</h2>
+            
+            <div class="my-projects__type-toggle">
+                <p class="my-projects__type-toggle__label" id="toggle-label-2d">2D</p>
+                <div class="my-projects__type-toggle__toggle">
+                    <input type="checkbox" name="">
+                </div>
+                <p class="my-projects__type-toggle__label" id="toggle-label-3d">3D</p>
+            </div>
+            
+<!--            <div class="my-projects__project-type-buttons">-->
+<!--                <button onclick="showOnly2DProjects()" class="btn&#45;&#45;project&#45;&#45;type-2d">2D</button>-->
+<!--                <button onclick="showOnly3DProjects()" class="btn&#45;&#45;project&#45;&#45;type-3d">3D</button>-->
+<!--            </div>-->
+            
+            <div id="projects-2d">
+                <div class="projects">
+                    <!-- Project 01 -->
+                    <div class="card card--project">
+                        <div class="project">
+                            <div class="project__header">
+                                <img src="img/logos/projects/garden-defenders-headonly-background-black.jpg" alt="" class="project__header__img">
+                                <h3 class="project__header__title">Garden Defenders</h3>
+                            </div>
+                            <div class="project__body">
+                                <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                                    sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                                    Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                            </div>
+                            <div class="project__footer">
+                                <a href="https://play.unity.com/mg/other/1-0-0-0-w" target="_blank" tabindex=0 class="btn btn--card">
+                                    Play Game
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 02 -->
+                    <div class="card card--project">
+                        <div class="project">
+                            <div class="project__header">
+                                <img src="img/logos/certifications/unity-icon-white-on-black.jpg" alt="" class="project__header__img">
+                                <h3 class="project__header__title">Game Name</h3>
+                            </div>
+                            <div class="project__body">
+                                <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                                    sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                                    Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                            </div>
+                            <div class="project__footer">
+                                <a href="#" target="_blank" tabindex=-1 class="btn btn--card btn--card--disabled">
+                                    Work in progress...
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project item 03 -->
+                    <div class="card card--more-to-come">
+                        <p>
+                            More to come...
+                        </p>
+                    </div>
+
+                    <!-- Project item 04 -->
+                    <div class="card card--more-to-come card--more-to-come--transparent">
+                    </div>
+
+                </div> <!-- / projects -->
+            </div>
+
+            <div id="projects-3d">
+                <div class="projects">
+                    <!-- Project 01 -->
+                    <div class="card card--project">
+                        <div class="project">
+                            <div class="project__header">
+                                <img src="img/logos/projects/garden-defenders-headonly-background-black.jpg" alt="" class="project__header__img">
+                                <h3 class="project__header__title">3d</h3>
+                            </div>
+                            <div class="project__body">
+                                <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                                    sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                                    Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                            </div>
+                            <div class="project__footer">
+                                <a href="https://play.unity.com/mg/other/1-0-0-0-w" target="_blank" tabindex=0 class="btn btn--card">
+                                    Play Game
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 02 -->
+                    <div class="card card--project">
+                        <div class="project">
+                            <div class="project__header">
+                                <img src="img/logos/certifications/unity-icon-white-on-black.jpg" alt="" class="project__header__img">
+                                <h3 class="project__header__title">3d</h3>
+                            </div>
+                            <div class="project__body">
+                                <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
+                                    sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
+                                    Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                            </div>
+                            <div class="project__footer">
+                                <a href="#" target="_blank" tabindex=-1 class="btn btn--card btn--card--disabled">
+                                    Work in progress...
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project item 03 -->
+                    <div class="card card--more-to-come">
+                        <p>
+                            More to come...
+                        </p>
+                    </div>
+
+                    <!-- Project item 04 -->
+                    <div class="card card--more-to-come card--more-to-come--transparent">
+                    </div>
+
+                </div> <!-- / projects -->
+            </div>
+
+        </section>
+
         <!-- About me -->
         <section class="about-me" id="about">
             <h2 class="section__title section__title--about">Who I am</h2>
@@ -278,30 +351,30 @@
         </section>
 
         <!-- Footer -->
-        <footer class="footer">
-            <a href="mailto:alin.cristian977@gmail.com" class="footer__link">alin.cristian977@gmail.com</a>
-            <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.facebook.com">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://twitter.com">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.linkedin.com">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-            </ul>
-        </footer>
+            <footer class="footer">
+                <a href="mailto:alin.cristian977@gmail.com" class="footer__link">alin.cristian977@gmail.com</a>
+                <ul class="social-list">
+                    <li class="social-list__item">
+                        <a class="social-list__link" href="https://github.com">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a class="social-list__link" href="https://www.facebook.com">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a class="social-list__link" href="https://twitter.com">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a class="social-list__link" href="https://www.linkedin.com">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
     </body>
 </html> 

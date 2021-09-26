@@ -161,6 +161,10 @@ h3 {
   transition: 0.3s all ease;
 }
 
+.btn:focus {
+  transition: 0s;
+}
+
 .btn--card {
   display: block;
   text-align: center;
@@ -169,8 +173,9 @@ h3 {
   padding: .8em 2.5em;
 }
 
-.btn:focus {
-  transition: 0s;
+.btn--card--disabled {
+  background-color: lightgray;
+  pointer-events: none;
 }
 
 /* END: Buttons */
@@ -215,6 +220,25 @@ h3 {
   padding: 6%;
   text-align: start;
   color: var(--clr-dark)
+}
+
+.card--more-to-come{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  background-color: white;
+  padding: 6%;
+  color: var(--clr-dark);
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-reg);
+}
+
+.card--more-to-come--transparent {
+  opacity: 0.035;
 }
 
 .card--certificate:focus{
@@ -348,6 +372,91 @@ header {
   background-color: var(--clr-darker);
   color: var(--clr-light);
   text-align: center;
+}
+
+.my-projects__project-type-buttons{
+
+}
+
+.btn--project--type-2d {
+
+}
+
+.btn--project--type-3d {
+
+}
+
+.my-projects__type-toggle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+  margin-bottom: 5em;
+}
+
+.my-projects__type-toggle__label {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+
+#toggle-label-2d {
+  color: orange;
+}
+
+.my-projects__type-toggle__toggle{
+  display: table;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+}
+
+input[type="checkbox"]
+{
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  width: 250px;
+  height: 80px;
+  appearance: none;
+  background: limegreen;
+  outline: none;
+  border-radius: 100px;
+  transition: 0.4s;
+  margin-bottom: 4em;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+input:checked[type="checkbox"]
+{
+  background-color: darkorange;
+}
+
+input[type="checkbox"]:before
+{
+  content: '';
+  text-align: center;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+input:checked[type="checkbox"]:before{
+  left: 170px
+}
+
+#projects-2d{
+  display: block;
+}
+
+#projects-3d{
+  display: none;
 }
 
 .projects{
