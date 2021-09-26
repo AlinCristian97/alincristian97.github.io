@@ -373,15 +373,19 @@ header {
 .project__header{
   display: flex;
   align-items: center;
-  justify-content: start;
   gap: 5%;
+  width: 100%;
 }
 
 .project__header__img {
+  display: flex;
   max-width: 90px;
   height: auto;
   width: 100%;
   border-radius: 0.3em;
+}
+
+.project__header__title{
 }
 
 .project__footer {
@@ -442,7 +446,7 @@ header {
 .certificate__header{
   display: flex;
   align-items: center;
-  justify-content: start;
+  width: 100%;
   gap: 5%;
 }
 
@@ -453,7 +457,7 @@ header {
   border-radius: 0.3em;
 }
 
-.certificate__header__title {
+.project__header__title {
 }
 
 .certificate__footer {
