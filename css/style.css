@@ -22,9 +22,6 @@
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
-
-  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 800px) {
@@ -52,6 +49,7 @@ body {
 }
 
 section {
+  min-height: 100vh;
   padding: 5em 2em;
   overflow: hidden;
 }
@@ -78,12 +76,6 @@ strong {
   /* tab-focused elements */
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
-}
-
-@media (min-height: 800px) {
-  section {
-    /*height: 100vh;*/
-  }
 }
 
 /* END: General Styles */
@@ -174,7 +166,7 @@ h3 {
 .card--intro__few-words {
   max-width: 1000px;
   margin-top: 4em;
-  background-color: darkslategrey;
+  background-color: var(--clr-darker);
   padding-top: 1%;
   padding-bottom: 1%;
 }
@@ -187,7 +179,10 @@ h3 {
 .card--portfolio__item{
   margin-bottom: 0;
   max-width: 500px;
-  background-color: darkgray;
+  background-color: white;
+  padding: 5%;
+  text-align: start;
+  color: var(--clr-dark)
 }
 
 .card--portfolio__item:focus{
@@ -236,7 +231,7 @@ header {
 
 /* Section - Intro */
 .intro--section {
-  /*height: calc(100vh - 69px);*/
+  min-height: calc(100vh - 69px);
 }
 
 .intro {
@@ -264,6 +259,7 @@ header {
   text-align: center;
   font-size: var(--fs-h3);
   font-weight: var(--fw-bold);
+  color: var(--clr-accent);
 }
 
 .section__subtitle--intro {
@@ -294,10 +290,6 @@ header {
 .about-me {
   max-width: 1000px;
   margin: 0 auto;
-}
-
-.about-me__img {
-  box-shadow: var(--bs);
 }
 
 @media (min-width: 600px) {
@@ -383,10 +375,10 @@ header {
   /*column-gap: 2em;*/
   
   display: grid;
-  grid-gap: 2em;
+  grid-gap: 3em;
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(250px, auto);
-  
+
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -402,12 +394,14 @@ header {
 @media (min-width:600px){
   .portfolio {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
   }
 }
 
 @media (min-width:1000px){
   .portfolio {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5em;
   }
 }
 
