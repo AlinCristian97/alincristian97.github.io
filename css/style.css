@@ -28,6 +28,10 @@
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
+  --fs-button: 1rem;
+  --fs-nav: 1rem;
+  
+  --hh: 69px;
 }
 
 @media (min-width: 800px) {
@@ -55,7 +59,7 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--hh));
   padding: 5em 2em;
   overflow: hidden;
 }
@@ -130,16 +134,20 @@ h3 {
   margin: 0.5em auto 1em;
 }
 
+.section__title--about::after {
+  margin: 0.5em auto 1em;
+  background: var(--clr-darker);
+}
+
 .section__subtitle {
   margin: 0;
   font-size: var(--fs-h3);
 }
 
 .section__subtitle--intro,
+
 .section__subtitle--about {
-  padding: 0.25em 1em;
-  font-family: var(--ff-primary);
-  margin-bottom: 1em;
+
 }
 
 .section__subtitle--certifications {
@@ -177,7 +185,7 @@ h3 {
 .btn--card {
   display: block;
   text-align: center;
-  font-size: 1rem;
+  font-size: var(--fs-button);
   border-radius: 0.3em;
   padding: .8em 2.5em;
 }
@@ -263,14 +271,37 @@ h3 {
 /* END: Cards */
 
 /* Header */
+a.anchor{
+  display: block;
+  position: relative;
+  top: calc(var(--hh) * -1);
+  visibility: hidden;
+}
+
+.sticky-header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: var(--hh);
+  z-index: 99;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
 header {
   background-color: var(--clr-darker);
   padding: 20px 10%;
+  margin: 0 auto;
+}
+
+nav{
+  margin: 0 auto;
+  max-width: 1000px;
+  font-size: var(--fs-nav);
 }
 
 .nav__links {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .nav__links li {
@@ -290,7 +321,6 @@ header {
 
 /* Section - Intro */
 .intro--section {
-  min-height: calc(100vh - 69px);
 }
 
 .intro {
@@ -299,7 +329,7 @@ header {
 }
 
 .intro__img-cropper-round{
-  margin: 0 auto;
+  margin: 0 auto .3em;
   width: 250px;
   height: 250px;
   overflow: hidden;
@@ -310,7 +340,7 @@ header {
 }
 
 .intro__img-cropper-round:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
 }
 
 .intro__name {
@@ -327,12 +357,8 @@ header {
 }
 
 @media (min-width: 600px) {
-  .intro {
-
-  }
-
-  .intro__img {
-
+  .intro__img-cropper-round{
+    margin: 0 auto;
   }
 }
 /* END: Section: Intro */
@@ -341,37 +367,17 @@ header {
 .about-me {
   max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
+
+
 
 @media (min-width: 600px) {
   .about-me {
-    display: grid;
-    grid-template-columns: 1fr 200px;
-    grid-template-areas:
-      "title img"
-      "subtitle img"
-      "text img";
-    grid-column-gap: 2em;
+    
   }
 
   .section__title--about {
-    grid-area: title;
-  }
-
-  .section__subtitle--about {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    position: relative;
-    left: -1em;
-    width: calc(100% + 2em);
-    padding-left: 1em;
-    padding-right: calc(200px + 4em);
-  }
-
-  .about-me__img {
-    grid-area: img;
-    position: relative;
-    z-index: 2;
   }
 }
 /* END: Section: About Me */
@@ -443,6 +449,11 @@ header {
   align-items: center;
   justify-content: center;
   place-items: center;
+  cursor: pointer;
+}
+
+#projects-toggle{
+  cursor: pointer;
 }
 
 input[type="checkbox"]
@@ -459,6 +470,11 @@ input[type="checkbox"]
   transition: 0.4s;
   margin-bottom: 4em;
   box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+}
+
+input[type="checkbox"]:hover{
+  
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
 }
 
 input:checked[type="checkbox"]
@@ -709,3 +725,4 @@ input:checked[type="checkbox"]:before{
 /* END: Footer */
 
 /* TODO: Auto-width from both sizes FIX => Used "display: block" in .section__title--intro strong */
+/* TODO: TOGGLE DARK/WHITE theme */

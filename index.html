@@ -25,29 +25,31 @@
         <script src="js/index.js"></script>
     </head>
     <body>
+    <a class="anchor" id="top-anchor"></a>
         <!-- Header -->
-        <header>
+        <header class="sticky-header">
             <nav>
                 <ul class="nav__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#projects">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#top-anchor">Intro</a></li>
+                    <li><a href="#projects-anchor">Projects</a></li>
+                    <li><a href="#about-anchor">About</a></li>
+                    <li><a href="#certifications-anchor">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
         
         <!-- Intro -->
-        <section class="intro intro--section" id="home">
+    <section class="intro intro--section" id="intro">
             <div class="intro__img-cropper-round">
-                <img src="img/autumn-24.jpg" alt="a picture of Alin Apostol smiling" class="intro__img">
+                <img src="img/autumn-24.jpg" alt="a picture of Alin smiling" class="intro__img">
             </div>
             <h1 class="intro__name">
                 Alin Apostol
             </h1>
             <div class="card card--intro__few-words">
                 <p class="intro__few-words">
-                    Lorem ipsum dolor sit amet consectetur adipiscing suscipit finibus rhoncus tempus consequat felis.
+                    It is my dream to be part of an inspiring team of game developers working together on an awesome Unity project.
                 </p>
 <!--                <p>-->
 <!--                    test-->
@@ -63,7 +65,8 @@
         </section>
 
         <!-- My Projects -->
-        <section class="my-projects" id="projects">
+    <a class="anchor" id="projects-anchor"></a>
+    <section class="my-projects" id="projects">
 
 <!--            <p>-->
 <!--                test-->
@@ -88,11 +91,6 @@
                 </div>
                 <p class="my-projects__type-toggle__label" id="toggle-label-3d">3D</p>
             </div>
-            
-<!--            <div class="my-projects__project-type-buttons">-->
-<!--                <button onclick="showOnly2DProjects()" class="btn&#45;&#45;project&#45;&#45;type-2d">2D</button>-->
-<!--                <button onclick="showOnly3DProjects()" class="btn&#45;&#45;project&#45;&#45;type-3d">3D</button>-->
-<!--            </div>-->
             
             <div id="projects-2d">
                 <div class="projects">
@@ -157,29 +155,8 @@
                     <div class="card card--project">
                         <div class="project">
                             <div class="project__header">
-                                <img src="img/logos/projects/garden-defenders-headonly-background-black.jpg" alt="" class="project__header__img">
-                                <h3 class="project__header__title">3d</h3>
-                            </div>
-                            <div class="project__body">
-                                <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
-                                    sit amet leoac dictum. Mauris suscipit tempus felis a dapibus.
-                                    Phasellus maximus hendrerit sollicitudin. Aenean finibus rhoncus ultricies.</p>
-                            </div>
-                            <div class="project__footer">
-                                <a href="https://play.unity.com/mg/other/1-0-0-0-w" target="_blank" tabindex=0 class="btn btn--card btn--project--type-3d">
-                                    Play Game
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 02 -->
-                    <div class="card card--project">
-                        <div class="project">
-                            <div class="project__header">
                                 <img src="img/logos/certifications/unity-icon-white-on-black.jpg" alt="" class="project__header__img">
-                                <h3 class="project__header__title">3d</h3>
+                                <h3 class="project__header__title">Game Name</h3>
                             </div>
                             <div class="project__body">
                                 <p class="project__body__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt
@@ -194,14 +171,14 @@
                         </div>
                     </div>
 
-                    <!-- Project item 03 -->
+                    <!-- Project item 02 -->
                     <div class="card card--more-to-come">
                         <p>
                             More to come...
                         </p>
                     </div>
 
-                    <!-- Project item 04 -->
+                    <!-- Project item 03 -->
                     <div class="card card--more-to-come card--more-to-come--transparent">
                     </div>
 
@@ -211,18 +188,17 @@
         </section>
 
         <!-- About me -->
+        <a class="anchor" id="about-anchor"></a>
         <section class="about-me" id="about">
-            <h2 class="section__title section__title--about">Who I am</h2>
-            <p class="section__subtitle section__subtitle--about">Lorem ipsuma dipiscing elit tincidunt sit amet...</p>
+            <h2 class="section__title section__title--about">About myself</h2>
             <div class="about-me__body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt sit amet 
-                    leoac dictum. Mauris suscipit tempus felis a dapibus. Phasellus maximus hendrerit 
-                    sollicitudin. Aenean finibus rhoncus ultricies.</p>
+                <p>Background</p>
+                <p>Education</p>
             </div>
-            <img src="img/melowsize.jpg" alt="" class="about-me__img">
         </section>
 
         <!-- My Certifications -->
+        <a class="anchor" id="certifications-anchor"></a>
         <section class="my-certifications" id="certifications">
             <h2 class="section__title section__title--certifications">My Certifications</h2>
             <div class="certifications">
@@ -351,7 +327,7 @@
         </section>
 
         <!-- Footer -->
-            <footer class="footer">
+            <footer class="footer" id="contact">
                 <a href="mailto:alin.cristian977@gmail.com" class="footer__link">alin.cristian977@gmail.com</a>
                 <ul class="social-list">
                     <li class="social-list__item">
