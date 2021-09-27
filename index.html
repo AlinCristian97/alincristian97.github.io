@@ -27,7 +27,7 @@
     <body>
     <a class="anchor" id="top-anchor"></a>
         <!-- Header -->
-        <header class="sticky-header">
+        <header class="header-non-mobile sticky-header">
             <nav>
                 <ul class="nav__links">
                     <li><a href="#top-anchor">Intro</a></li>
@@ -38,11 +38,28 @@
                 </ul>
             </nav>
         </header>
+
+    <header class="header-mobile sticky-header">
+        <button onclick="toggleHamburger()" class="nav-toggle">
+            <span class="hamburger"></span>
+        </button>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#top-anchor">Intro</a></li>
+                <li><a href="#projects-anchor">Projects</a></li>
+                <li><a href="#about-anchor">About</a></li>
+                <li><a href="#certifications-anchor">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
         
         <!-- Intro -->
     <section class="intro intro--section" id="intro">
             <div class="intro__img-cropper-round">
-                <img src="img/autumn-24.jpg" alt="a picture of Alin smiling" class="intro__img">
+                <a href="https://linkedin.com/in/alin-apostol-366b20152" target="_blank">
+                    <img src="img/autumn-24.jpg" alt="a picture of Alin smiling" class="intro__img">
+                </a>
             </div>
             <h1 class="intro__name">
                 Alin Apostol
@@ -86,7 +103,7 @@
             
             <div class="my-projects__type-toggle">
                 <p class="my-projects__type-toggle__label" id="toggle-label-2d">2D</p>
-                <div class="my-projects__type-toggle__toggle">
+                <div class="my-projects__type-toggle__toggle" tabindex="0">
                     <input type="checkbox" name="" id="projects-toggle" onclick="toggleProjects2D3D()">
                 </div>
                 <p class="my-projects__type-toggle__label" id="toggle-label-3d">3D</p>

@@ -1,4 +1,16 @@
-﻿function showOnly2DProjects() {
+﻿function toggleHamburger(){
+    const navLinks = document.querySelectorAll(".nav__links li a")
+    
+    document.body.classList.toggle("nav-open");
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            document.body.classList.remove("nav-open");
+        })
+    })
+}
+
+function showOnly2DProjects() {
     const projects2dDiv = document.getElementById("projects-2d");
     const projects3dDiv = document.getElementById("projects-3d");
     const projects2dToggleLabel = document.getElementById("toggle-label-2d");
