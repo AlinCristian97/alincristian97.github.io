@@ -1,4 +1,9 @@
-﻿function toggleHamburger(){
+﻿window.addEventListener('scroll', function (){
+    var scroll = document.querySelector('.back-to-top');
+    scroll.classList.toggle("active", window.scrollY > 500)
+})
+
+function toggleHamburger(){
     const navLinks = document.querySelectorAll(".nav__links li a")
     
     document.body.classList.toggle("nav-open");

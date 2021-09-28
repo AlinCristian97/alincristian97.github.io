@@ -270,13 +270,57 @@ h3 {
 
 /* END: Cards */
 
-/* Header */
 a.anchor{
   display: block;
   position: relative;
   top: calc(var(--hh) * -1);
   visibility: hidden;
 }
+
+.back-to-top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: var(--clr-accent);
+  bottom: 40px;
+  right: 50px;
+  border-radius: .3em;
+  
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: var(--clr-darker);
+  font-size: 22px;
+  
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  
+  visibility: hidden;
+  opacity: 0;
+  
+  transition: 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+  background-color: var(--clr-accent-hover);
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 0.7;
+}
+
+@media (max-width: 800px){
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 5px;
+    right: 5px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+}
+
+/* Header */
 
 .header-non-mobile.sticky-header{
   position: sticky;
