@@ -135,8 +135,8 @@ h3 {
 }
 
 .section__title--about::after {
-  margin: 0.5em auto 1em;
-  background: var(--clr-darker);
+  margin: 0.5em auto 1.5em;
+  background: var(--clr-light);
 }
 
 .section__subtitle {
@@ -237,6 +237,12 @@ h3 {
   padding: 6%;
   text-align: start;
   color: var(--clr-dark)
+}
+
+.card--about {
+  background-color: var(--clr-light);
+  color: var(--clr-darker);
+  text-align: left;
 }
 
 .card--more-to-come{
@@ -548,16 +554,22 @@ a.anchor{
 
 /* Section: About Me */
 .about-me {
-  max-width: 1000px;
+  background-color: var(--clr-darker);
   margin: 0 auto;
   text-align: center;
 }
 
+.about-me__body{
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.about-me__body__background{
+}
 
 
 @media (min-width: 600px) {
   .about-me {
-    
   }
 
   .section__title--about {
@@ -812,7 +824,7 @@ input:checked[type="checkbox"]:before{
   flex-wrap: wrap;
   gap: 20px;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
 }
 
