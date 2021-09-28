@@ -205,6 +205,7 @@ h3 {
   transition: 0.3s;
   border-radius: .3em;
   padding: 2%;
+  width: 100%;
 }
 
 .card:hover {
@@ -226,7 +227,7 @@ h3 {
   background-color: var(--clr-light);
   padding: 6%;
   text-align: start;
-  color: var(--clr-dark)
+  color: var(--clr-dark);
 }
 
 .card--certificate{
@@ -236,7 +237,7 @@ h3 {
   background-color: var(--clr-light);
   padding: 6%;
   text-align: start;
-  color: var(--clr-dark)
+  color: var(--clr-dark);
 }
 
 .card--about {
@@ -721,15 +722,14 @@ input:checked[type="checkbox"]:before{
   flex-wrap: wrap;
   gap: 20px;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .project__header{
   display: flex;
   align-items: center;
   gap: 5%;
-  width: 100%;
 }
 
 .project__header__img {
@@ -741,6 +741,7 @@ input:checked[type="checkbox"]:before{
 }
 
 .project__header__title{
+  width: 100%;
 }
 
 .project__footer {
@@ -824,14 +825,13 @@ input:checked[type="checkbox"]:before{
   flex-wrap: wrap;
   gap: 20px;
   flex-direction: column;
-  align-items: start;
   justify-content: space-between;
+  width: 100%;
 }
 
 .certificate__header{
   display: flex;
   align-items: center;
-  width: 100%;
   gap: 5%;
 }
 
