@@ -61,12 +61,12 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--clr-accent-hover);
+  background-color: var(--clr-accent);
 }
 
 @supports (scrollbar-color: red blue) {
   * {
-    scrollbar-color: white var(--clr-accent);
+    scrollbar-color: var(--clr-light) #151515;
     scrollbar-width: auto;
   }
 }
@@ -326,7 +326,7 @@ a.anchor{
   color: var(--clr-darker);
   font-size: 22px;
   
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   
   visibility: hidden;
   opacity: 0;
@@ -336,6 +336,7 @@ a.anchor{
 
 .back-to-top:hover {
   background-color: var(--clr-accent-hover);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.7);
 }
 
 .back-to-top.active {
