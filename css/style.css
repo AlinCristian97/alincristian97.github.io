@@ -30,6 +30,9 @@
   --fs-body: 1rem;
   --fs-button: 1rem;
   --fs-nav: 1rem;
+
+  --br-small: 0.3em;
+  --br-normal: 0.5em;
   
   --hh: 69px;
 }
@@ -213,7 +216,7 @@ h3 {
   display: block;
   text-align: center;
   font-size: var(--fs-button);
-  border-radius: 0.3em;
+  border-radius: var(--br-normal);
   padding: .8em 2.5em;
 }
 
@@ -230,7 +233,7 @@ h3 {
   margin: 0 auto 4em;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  border-radius: .3em;
+  border-radius: var(--br-normal);
   padding: 2%;
   width: 100%;
 }
@@ -318,7 +321,7 @@ a.anchor{
   background-color: var(--clr-accent);
   bottom: 40px;
   right: 50px;
-  border-radius: .3em;
+  border-radius: var(--br-small);
   
   text-decoration: none;
   text-align: center;
@@ -571,7 +574,7 @@ a.anchor{
 
 .intro__few-words {
   text-align: center;
-  border-radius: .3em;
+  border-radius: var(--br-normal);
 }
 
 @media (min-width: 600px) {
@@ -765,12 +768,78 @@ input:checked[type="checkbox"]:before{
   max-width: 90px;
   height: auto;
   width: 100%;
-  border-radius: 0.3em;
+  border-radius: var(--br-normal);
 }
 
 .project__header__title{
   width: 100%;
 }
+
+.project__body__description{
+  margin-bottom: 1em;
+}
+
+.project__body__description p{
+  margin: 0;
+}
+
+.project__body__skills {
+}
+
+.project__body__skills ul{
+  margin: 0;
+  padding-left: 0;
+  font-weight: var(--fw-bold);
+}
+
+.project__body__specs{
+  display: flex;
+  flex-direction: column;
+  row-gap: .75em;
+}
+
+.project__body__specs__specification p{
+  margin: 0;
+}
+
+.project__body__specs__specification__label {
+  font-style: italic;
+}
+
+.project__body__specs__specification__data {
+  font-weight: var(--fw-bold);
+}
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  text-align: center;
+  font-style: italic;
+  height: 1.5em;
+  opacity: .5;
+}
+
+.hr-text::before {
+   content: '';
+   background: var(--clr-dark);
+   position: absolute;
+   left: 0;
+   top: 50%;
+   width: 100%;
+   height: 1px;
+ }
+
+.hr-text::after {
+   content: attr(data-content);
+   position: relative;
+   display: inline-block;
+   padding: 0 .5em;
+   line-height: 1.5em;
+   color: var(--clr-dark);
+   background-color: var(--clr-light);
+ }
 
 .project__footer {
   width: 100%;
@@ -867,7 +936,7 @@ input:checked[type="checkbox"]:before{
   max-width: 90px;
   height: auto;
   width: 100%;
-  border-radius: 0.3em;
+  border-radius: var(--br-normal);
 }
 
 .project__header__title {
