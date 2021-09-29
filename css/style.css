@@ -270,10 +270,19 @@ h3 {
 }
 
 .card--about {
-  background-color: var(--clr-light);
-  color: var(--clr-darker);
+  background-color: var(--clr-darker);
+  color: var(--clr-light);
   text-align: left;
-  padding: 1em 2.5em;
+  padding: 0 12em;
+  box-shadow: none;
+}
+
+.card--about:hover {
+  box-shadow: none;
+}
+
+.card--about p{
+  margin: 0;
 }
 
 .card--more-to-come{
